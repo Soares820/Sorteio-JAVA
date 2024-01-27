@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Nomes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #007bff; /* Azul */
+            color: white; /* Cor do texto */
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #fff; /* Branco */
+            color: #007bff; /* Azul */
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3; /* Azul mais escuro */
+            color: #fff; /* Branco */
+        }
+        #resultado {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>
+            <img src="78faedd8090c7e2e7d4ddfeb086d8e0e.png" alt="Imagem 1" style="height: 100px;"> 
+            Sorteio de Nomes
+            <img src="e7a8cfc0b7cc637eda8e12f66ab71bd7.png" alt="Imagem 2" style="height: 100px;"> 
+        </h1>
+        <button onclick="sortearNome()">Sortear</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function sortearNome() {
+            var nomes = ["Cleber", "Henrique", "Denni", "Ket", "Barbara", "Gabriel", "Paulo", "Matheus", "Fabio", "Lucas"];
+
+            var indiceSorteado = Math.floor(Math.random() * nomes.length);
+            var nomeSorteado = nomes[indiceSorteado];
+
+            document.getElementById("resultado").innerHTML = "Nome sorteado: " + nomeSorteado;
+        }
+    </script>
+</body>
+</html>
